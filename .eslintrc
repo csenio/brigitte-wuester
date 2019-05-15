@@ -1,0 +1,31 @@
+{
+  "extends": ["airbnb"],
+  "plugins": ["import", "lodash", "prettier", "react", "react-hooks"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/button-has-type": "error",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "comma-dangle": ["error", "never"],
+    "camelcase": "off",
+    "global-require": "off",
+    "no-console": "off",
+    "linebreak-style": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "function-paren-newline": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": [["~components", "./src/components"], ["~utils", "./src/utils"]]
+    }
+  }
+}
