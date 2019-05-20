@@ -8,8 +8,8 @@ import styled from "styled-components"
 const Background = styled.div`
   min-height: 100vh;
   width: 100%;
-  background: ${p => p.theme.colors.beige};
   display: flex;
+  background-color: ${p => p.theme.colors.beige};
   justify-content: center;
   align-items: center;
 `
