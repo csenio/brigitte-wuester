@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brigitte-wuester",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Website for Brigitte Wuester",
   "version": "0.1.0",
   "author": "Jesco Wuester <jescowue@ymail.com>",
   "dependencies": {

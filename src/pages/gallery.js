@@ -30,7 +30,7 @@ const Content = styled.div``
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Welcome"
+      title="Gallery"
       keywords={[
         `Keramik`,
         `Brigitte Wuester`,
