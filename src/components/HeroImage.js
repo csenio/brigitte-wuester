@@ -4,9 +4,16 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const Container = styled.div`
-  width: 600px;
-  position: absolute;
+  /* min-width: 500px; */
+  width: 60%;
   left: -100px;
+  position: absolute;
+  ${p => p.theme.breakpoints.maxlaptop} {
+    width: 100%;
+    left: auto;
+
+    position: relative;
+  }
 `
 
 const HeroImage = () => (

@@ -31,6 +31,7 @@ const Footer = styled.footer`
 `
 
 const Nav = styled.nav`
+  flex-wrap: wrap;
   padding: 0 120px;
   z-index: 5;
   position: absolute;
@@ -42,6 +43,16 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${p => p.theme.breakpoints.maxlaptop} {
+    justify-content: center;
+  }
+  ${p => p.theme.breakpoints.maxmobile} {
+    /* flex-direction: column; */
+    height: auto;
+    a {
+      margin: 10px;
+    }
+  }
 `
 
 export { Footer, Nav, NavLink }

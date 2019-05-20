@@ -15,6 +15,34 @@ const Card = styled(Box)`
   position: relative;
   justify-content: center;
   text-align: center;
+  padding-left: 40%;
+  padding-right: 50px;
+  width: 70%;
+  margin-bottom: 30px;
+  h1 {
+    margin-bottom: 15px;
+    font-size: 35px;
+  }
+  ${p => p.theme.breakpoints.maxlaptop} {
+    margin-top: 100px;
+    padding: 30px;
+    width: 80%;
+    height: auto;
+    h1 {
+      font-size: 35px;
+    }
+  }
+  ${p => p.theme.breakpoints.maxmobile} {
+    height: auto;
+    padding: 0;
+    width: 95%;
+    margin-top: 140px;
+    h1 {
+      margin-bottom: 0;
+      margin-top: 5px;
+      font-size: 30px;
+    }
+  }
 `
 
 const Body = styled.div`
@@ -25,7 +53,17 @@ const Body = styled.div`
   justify-content: center;
 `
 
-const Content = styled.div``
+const Content = styled.div`
+  font-size: 18px;
+  ${p => p.theme.breakpoints.maxlaptop} {
+    font-size: 18px;
+    margin: 15px;
+  }
+  ${p => p.theme.breakpoints.maxmobile} {
+    font-size: 15px;
+    margin: 15px;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -43,10 +81,10 @@ const IndexPage = () => (
       ]}
     />
     <Body>
-      <Card pl="550px" pr="50px" width="70%">
+      <Card>
         <HeroImage />
-        <Text fontSize="40px" color="brown" mb="30px" as="h1">
-          Brigitte Wuester
+        <Text color="brown" as="h1">
+          Brigitte Wüster
         </Text>
         <Content>
           <Text as="p">

@@ -14,6 +14,10 @@ const Background = styled.div`
   align-items: center;
 `
 
+const Main = styled.main`
+  width: 100%;
+`
+
 const menus = [
   {
     text: "home",
@@ -51,7 +55,7 @@ const Layout = ({ children }) => (
         </NavLink>
       ))}
     </Nav>
-    <main>{children}</main>
+    <Main>{children}</Main>
     {/* <Footer>© Copyright 2019 brigitte-wuester.com</Footer> */}
   </Background>
 )
