@@ -1,12 +1,23 @@
 import React from "react"
-import { Layout, HeroImage, Text, Box } from "~components"
-import Image from "../components/image"
+import { Layout, Text, Box } from "~components"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+
+const Container = styled.div`
+  min-width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  ${p => p.theme.breakpoints.maxlaptop} {
+    display: none;
+  }
+`
 
 const Card = styled(Box)`
   box-shadow: ${p => p.theme.shadows.z3};
-  background: ${p => p.theme.colors.white};
+  background: ${p => p.theme.colors.whiteTransparent};
   height: 500px;
   border-radius: 2px;
   display: flex;
@@ -27,10 +38,31 @@ const Body = styled.div`
 
 const Content = styled.div``
 
+const HeroImage = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        logo: file(relativePath: { eq: "contact.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Container>
+        <Img fluid={data.logo.childImageSharp.fluid} />
+      </Container>
+    )}
+  />
+)
+
 const ContactPage = () => (
   <Layout>
     <SEO
-      title="Welcome"
+      title="Contact"
       keywords={[
         `Keramik`,
         `Brigitte Wuester`,
@@ -39,27 +71,31 @@ const ContactPage = () => (
         `Art`,
         `Kunst`,
         `Pottery`,
-        `Skulptur`
+        `Skulptur`,
+        `Contact`
       ]}
     />
     <Body>
-      <Card pl="550px" pr="50px" width="70%">
-        <HeroImage />
-        <Text fontSize="40px" color="brown" mb="30px" as="h1">
-          Get
+      <HeroImage />
+      <Card pl="50px" pr="50px" width="70%">
+        <Text fontSize="30px" color="brown" mb="10px" as="h1">
+          Contact
         </Text>
         <Content>
-          <Text as="p">
-            „Wahrscheinlich ist wichtig, dass die Sachen einfach und komplex
-            sind. Es ist nicht so, dass das Komplexe durch eine komplizierte
-            Form ausgedrückt wird, sondern das Komplexe ist vielleicht besser
-            durch eine einfache Form auszudrücken. In der Einfachheit und
-            Reduzierung ist für mich eine größere Vielfalt enthalten als in
-            einer nach außen hin vielgestaltigen, komplizierten Form.“
+          <Text as="h3" mt="20px">
+            Mailing adress:
           </Text>
-          <Text mt="20px" as="p">
-            Norbert Prangenberg (1949-2012)
+          <Text as="p">Mesnerhauserstr. 8 - 82418 Aidling</Text>
+          <Text as="p">bwuester(at)posteo.de</Text>
+          <Text as="p">+491754789297</Text>
+          <Text as="h3" mt="20px">
+            Workshop:
           </Text>
+          <Text as="p">Dorfstr.11 Rgb. 82418 Hofheim</Text>
+          <Text as="h3" mt="20px">
+            opening hours
+          </Text>
+          <Text as="p">by arrangement</Text>
         </Content>
       </Card>
     </Body>

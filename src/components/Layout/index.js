@@ -28,22 +28,22 @@ const menus = [
     text: "contact",
     to: "/contact",
     key: 1
-  },
-  {
-    text: "current",
-    to: "/current",
-    key: 2
-  },
-  {
-    text: "gallery",
-    to: "/gallery",
-    key: 3
-  },
-  {
-    text: "about",
-    to: "/about",
-    key: 4
   }
+  // {
+  //   text: "current",
+  //   to: "/current",
+  //   key: 2
+  // },
+  // {
+  //   text: "gallery",
+  //   to: "/gallery",
+  //   key: 3
+  // },
+  // {
+  //   text: "about",
+  //   to: "/about",
+  //   key: 4
+  // }
 ]
 
 const Layout = ({ children }) => (

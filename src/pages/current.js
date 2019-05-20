@@ -3,8 +3,8 @@ import { Layout } from "~components"
 
 const signup = () => {
   return (
-    <Layout>
-      <div>signup</div>
+    <Layout textAlign="center">
+      <div>under construction</div>
     </Layout>
   )
 }
