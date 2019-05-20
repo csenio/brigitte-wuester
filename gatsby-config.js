@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Blossom`,
-    description: `Blossom puts you in control of your studio. With a simple studio management system, you can focus on bringing your community together.`,
-    author: `story of ams`,
+    title: `Brigitte Wuester`,
+    description: `the art of Brigitte Wwuester`,
+    author: `Jesco Wuester`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -11,8 +11,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -24,12 +24,11 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+        display: `minimal-ui`
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }

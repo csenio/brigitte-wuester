@@ -1,14 +1,14 @@
 export default {
   name: "default",
   colors: {
-    brand: "#231829",
-    yellow: "#F6C300",
-    beige: "rgba(246, 195, 0, 0.1)",
+    dark: "#231829",
+    brown: "#5b1715",
+    beige: "#F2E9E0",
     white: "#fff",
     greyLight: "#EDEDEF",
     grey: "#B5B2BB",
     black: "#1F1424",
-    overlay: "#rgba(0, 0, 0, 0.7)",
+    overlay: "#rgba(0, 0, 0, 0.7)"
   },
   shadows: {
     // use like box-shadow: ${({theme}) => theme.shadows.z1};
@@ -21,10 +21,10 @@ export default {
     z4:
       "0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 16px 16px -1px rgba(10, 22, 70, 0.1)",
     z5:
-      "0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 32px 40px -2px rgba(10, 22, 70, 0.12)",
+      "0px 0px 1px 0px rgba(10, 22, 70, 0.06), 0px 32px 40px -2px rgba(10, 22, 70, 0.12)"
   },
   layout: {
-    sideMargin: "242px",
+    sideMargin: "242px"
   },
   breakpoints: {
     maxmobile: "@media all and (max-width: 767px)",
@@ -32,6 +32,6 @@ export default {
     maxdesktop: "@media all and (max-width: 1199px)",
     minmobile: "@media all and (min-width: 767px)",
     minlaptop: "@media all and (min-width: 991px)",
-    mindesktop: "@media all and (min-width: 1199px)",
-  },
+    mindesktop: "@media all and (min-width: 1199px)"
+  }
 }

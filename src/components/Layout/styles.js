@@ -2,25 +2,26 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const NavLink = styled(Link)`
-  color: ${p => p.theme.colors.white};
+  &.selected {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 48%;
+      bottom: -10px;
+      height: 4px;
+      width: 4px;
+      border-radius: 100%;
+      background: ${p => p.theme.colors.brown};
+    }
+  }
+  position: relative;
+  color: ${p => p.theme.colors.dark};
   font-size: 14px;
   letter-spacing: 0.2em;
   margin-right: 30px;
 `
 
-const Logo = styled(Link)`
-  color: ${p => p.theme.colors.white};
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  font-size: 30px;
-  img {
-    margin-right: 15px;
-  }
-`
-
 const Footer = styled.footer`
-  padding: 240px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -30,16 +31,17 @@ const Footer = styled.footer`
 `
 
 const Nav = styled.nav`
-  padding: 0 144px;
+  padding: 0 120px;
   z-index: 5;
   position: absolute;
   top: 0;
-  left: 0;
-  height: 100px;
+  right: 0;
+  height: 80px;
   background: transparent;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 `
 
-export { Footer, Nav, NavLink, Logo }
+export { Footer, Nav, NavLink }

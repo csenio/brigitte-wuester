@@ -4,6 +4,9 @@ import {
   lineHeight,
   fontWeight,
   letterSpacing,
+  space,
+  color,
+  fontSize
 } from "styled-system"
 import styled from "styled-components"
 
@@ -12,11 +15,10 @@ const Text = styled.span(
   textAlign,
   lineHeight,
   fontWeight,
-  letterSpacing
+  letterSpacing,
+  space,
+  color,
+  fontSize
 )
-
-Text.defaultProps = {
-  color: "inherit",
-}
 
 export default Text
