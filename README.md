@@ -1,4 +1,4 @@
-# 🌺 Blossom Landing
+# Brigitte Wuester
 
 to develop:
 
