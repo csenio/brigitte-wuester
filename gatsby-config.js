@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Brigitte Wuester`,
-    description: `the art of Brigitte Wwuester`,
+    description: `Personal website of Brigitte Wuester`,
     author: `Jesco Wuester`
   },
   plugins: [
